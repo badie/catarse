@@ -327,6 +327,9 @@ pt:
   i_contributed: "Eu apoiei o projeto %{name} no @catarse"
   i_just_contributed: "Eu acabei de apoiar o projeto %{name} no @catarse"
   layouts:
+    announcement:
+      message: "Atualize seu e-mail, já! Nosso sistema de login está mudando"
+      action: "Clique aqui e saiba mais"
     login:
       login_with_facebook: "entre com sua conta do facebook"
       remember_me: "Lembre-se de mim e mantenha-me conectado."
