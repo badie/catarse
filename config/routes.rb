@@ -43,7 +43,9 @@ Catarse::Application.routes.draw do
 #  mount CatarseWepay::Engine => "/", as: :catarse_wepay
 
   # Channels
-  constraints subdomain: /^(?!www|secure|test|local)(\w+)/ do
+  subdomains = %w(www secure test local)
+  subdomains << ENV['HEROKU_SUBDOMAIN'] if ENV['HEROKU_SUBDOMAIN'].present?
+  constraints subdomain: /^(?!#{subdomains.join("|")})(\w+)/ do
     namespace :channels, path: '' do
       namespace :admin do
         namespace :reports do
