@@ -1,0 +1,26 @@
+- if policy(@project).update?
+  .project-warning
+    h3
+      = 'Um, not this time yet…'
+
+    #project_warning_text
+      p
+        = 'Unfortunately, your project did not reach its goals. We hope that your campaign has generated knowledge and insights that allows you to benefit from this experience. We hope to see you again!!!'
+
+      .accordion
+        h4
+          = 'Important'
+        ul.accordion-content
+          li
+            = link_to 'My project was not funded, what now?', 'http://suporte.catarse.me/knowledgebase/articles/161099-meu-projeto-n%C3%A3o-foi-financiado-o-que-acontecer%C3%A1-a', target: '_blank'
+          li
+            = link_to 'Rules of Operation and Refunds', 'http://suporte.catarse.me/knowledgebase/articles/164746-regras-e-funcionamento-dos-reembolsos-estornos', target: '_blank'
+      .accordion
+        h4
+          = 'Troubleshooting'
+        ul.accordion-content.warning-links
+          li
+            = link_to 'Help! | Errors in reports of supporters', 'http://suporte.catarse.me/knowledgebase/articles/274781-socorro-erros-no-relat%C3%B3rio-planilha-de-apoiador', target: '__blank'
+
+  button.toggle-warning
+    = '×'

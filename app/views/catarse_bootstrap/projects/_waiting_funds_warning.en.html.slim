@@ -1,0 +1,31 @@
+- if policy(@project).update?
+  .project-warning
+      h3
+        = 'Awaiting funds'
+
+      #project_warning_text
+        .accordion
+            h4
+              = 'Important'
+            ul.accordion-content
+              li
+                p
+                  = 'Within 3 working days we will compute the pending payments and will know exactly how much you have collected and if your goal was reached!'
+                p
+                  = "If the goal was reached, we will transfer the money to you! Confirm #{link_to 'how the transfer will be done', 'http://suporte.catarse.me/knowledgebase/articles/161090-como-ser%C3%A1-feito-o-repasse-do-dinheiro-', target: '_blank'} and remember to #{link_to 'Verify your MoIP account to receive the collected amount', 'http://suporte.catarse.me/knowledgebase/articles/179127-verificar-sua-conta-moip', target: '__blank'}".html_safe
+                p
+                  = "If you have not reached it, we will return the money to the supporters!"
+                p
+                  = "We will send an e-mail to our supporters, informing them how they can ask for the refund."
+                p
+                  = "Confirm: #{link_to 'Rules of Operation and Refunds', 'http://suporte.catarse.me/knowledgebase/articles/164746-regras-e-funcionamento-dos-reembolsos-estornos', target: '_blank'}".html_safe
+
+        .accordion
+            h4
+              = 'Troubleshooting'
+            ul.accordion-content.warning-links
+              li
+                = link_to 'Help! | Errors in the supporters reports', 'http://suporte.catarse.me/knowledgebase/articles/274781-socorro-erros-no-relat%C3%B3rio-planilha-de-apoiador', target: '_blank'.html_safe
+
+  button.toggle-warning
+    = '×'

@@ -1,0 +1,34 @@
+- if policy(@project).update?
+  .project-warning
+    h3
+      = 'Project is live'
+
+    #project_warning_text
+      .accordion
+        h4
+          = 'Important'
+        ul.accordion-content
+          li
+            = 'Contributions can take up to 3 working days before being confirmed.'
+          li
+            = 'Your time ends at 23h59 of the last poll day.'
+          li
+            = 'To speak directly with your supporters you can make your posts on the <strong>news tab</strong>. Everything posted there is sent as email to your supporters.'.html_safe
+          li
+            = "Click on #{link_to 'REPORTS', project_by_slug_path(permalink: @project.permalink, anchor: 'reports')} to download worksheets with information about your supporters like: Rewards | Supporting value | Support confirmation date | Name | E-mail | Address.".html_safe
+
+      .accordion
+        h4
+          = 'Troubleshooting'
+        ul.accordion-content.warning-links
+          li
+            = link_to 'How do i know if my project is going good?', 'http://suporte.catarse.me/knowledgebase/articles/161084-como-eu-sei-se-meu-projeto-est%C3%A1-caminhando-bem-', target: '__blank'
+          li
+            = link_to 'How are the project’s highlights on the site defined?', 'http://suporte.catarse.me/knowledgebase/articles/161081-como-s%C3%A3o-definidos-os-projetos-em-destaque-no-site', target: '__blank'
+          li
+            = link_to 'Help! | Errors in the supporters reports', 'http://suporte.catarse.me/knowledgebase/articles/274781-socorro-erros-no-relat%C3%B3rio-planilha-de-apoiador', target: '__blank'
+          li
+            = link_to 'Help! | People are struggling to support my project', 'http://suporte.catarse.me/knowledgebase/articles/274798-socorro-problema-erro-bug-ao-apoiar-projeto', target: '__blank'
+
+  button.toggle-warning
+    = '×'
