@@ -1,0 +1,14 @@
+.project-warning
+  h3
+    = 'This project was not accepted'
+
+  #project_warning_text
+    p
+      = 'Our team understands that this project does not have the profile.'
+    p
+      = 'We wish to remind you that having a project refused does not prevent you from sending new projects.'
+    p
+      = "Get up, shake the dust and get over it! Study our #{link_to 'Support Center', ::CatarseSettings[:support_forum]} in order to learn everything about our prerequisites for the construction of your next project. For more information about a project's approval requirements on Catarse, please visit #{link_to 'guidelines for the creation of projects', 'http://suporte.catarse.me/knowledgebase/articles/241190-diretrizes-para-a-cria%C3%A7%C3%A3o-de-projetos', target: '__blank'}.".html_safe
+
+button.toggle-warning
+  = '×'
