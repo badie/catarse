@@ -1,0 +1,42 @@
+br
+- if policy(@project).update?
+  #project_warning.bootstrap-alert
+    .alert.alert-warning
+      i Welcome to the Draft!
+      #toggle_warning
+        = link_to '(minimize information)', '#'
+      #project_warning_text
+        br/
+        br/
+        | To edit your project page, look below for the <strong>EDIT TAB</strong>, do all the alterations in the form and click on <strong>UPDATE PROJECT</strong>.
+        br/
+        | Rewards can be directly added to the column where they are exposed, you just have to click on <strong>ADD REWARDS</strong>.
+        br/
+        br/
+        strong Important!
+        br/
+        | Our team will evaluate your project once you click on the button <strong>SEND PROJECT</strong>. We will analyze the consistency of your projectbased only on the information present on your draft.
+        | So be quite clear and objective while constructing this page. The <strong>video</strong> is not obligatory for the evaluation, only to launch the project.
+        | In case you already have it ready, turn it in to us. The more information we have to attend and evaluate, the better.
+        | Do not forget to study the artiles in our #{link_to 'Support Center!', CatarseSettings[:support_forum], target: '__blank'}. There you can inform yourself about the majority of the projects that occurred before, during and after a #{CatarseSettings[:company_name]} campaign!
+        br/
+        br/
+        strong Troubleshooting:
+        br/
+        | Check out: #{link_to 'Directors - First Steps', 'http://suporte.catarse.me/knowledgebase/topics/25764-realizadores-primeiros-passos-pr%C3%A9-projeto-', target: '__blank'}
+      br/
+      br/
+      .bootstrap-twitter
+        = link_to 'Send project', send_to_analysis_project_path(@project), class: 'btn btn-large'
+- else
+  #project_warning.bootstrap-alert
+    .alert.alert-warning
+      i Attention! This project is still in the draft phase
+      #toggle_warning
+        = link_to '(minimize information)', '#'
+      #project_warning_text
+        br/
+        br/
+        | This project is not yet ready to receive financial contributions and the information on this page is not definitive.
+        | If you want to support it right now, leave your feedback to the director in the <strong>Comments Tab</strong>.
+

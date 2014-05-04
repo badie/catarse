@@ -1,0 +1,26 @@
+- if policy(@project).update?
+  .project-warning
+    h3 = 'Project analysis'
+
+    #project_warning_text
+      p
+        = 'We are evaluating the information of your draft, we will contact you within 4 working days.'
+      p
+        = "Remember to fill in your #{link_to 'profile information', user_path(@project.user)} on Catarse".html_safe
+
+      .accordion
+        h4
+          = 'Troubleshooting'
+        ul.accordion-content.warning-links
+          li
+            = link_to 'Help! | It\'s been 4 days and I still have not received news from trustee, what should i do?', 'http://suporte.catarse.me/knowledgebase/articles/274766-socorro-j%C3%A1-mandei-h%C3%A1-dois-dias-%C3%BAteis-e-a-curado', target: '__blank'
+- else
+  .project-warning
+    h2 = 'Attention! This project is<br> not launched yet!'.html_safe
+
+    #project_warning_text
+      p
+        = "The director responsible is still making adjustments!. Take the opportunity to take a look at the page and leave your feedback to the director in the <strong>#{link_to 'COMMENTS', project_by_slug_path(permalink: @project.permalink, anchor: 'comments')}</strong> tab. Help improve the project with your opinion!".html_safe
+
+button.toggle-warning
+  = '×'
