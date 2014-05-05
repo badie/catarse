@@ -14,11 +14,13 @@ en:
         order_desc: 'Goal desc'
         order_created_at: 'Submission date'
         last_modification: 'Last update'
+        menu: 'Admin projects'
     financials:
       index:
         submit: 'Filter'
         by_state: 'By state'
         by_progress: By progress %
+        menu: 'Financials'
     users:
       index:
         title: "Management contributions"

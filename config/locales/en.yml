@@ -653,7 +653,9 @@ en:
         state: "State"
         approve: "Approve"
         reject: "Reject"
-        send_to_draft: "Sendo to draft"
+        send_to_draft: "Send to draft"
+        send_to_trash: "Delete Project"
+        confirmation: "Are you sure you want to delete this project?"
     edit: "Update channel"
 
   registrations:

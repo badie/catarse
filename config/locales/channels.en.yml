@@ -11,8 +11,11 @@ en:
     subscribed: "%{count} subscribed to this channel"
     admin:
       menu: "Channel moderation"
+      followers_menu: "Followers"
       statistics_menu: "Statistics"
       profile_menu: "Channel profile"
+      partners_menu: "Edit partners"
+      posts_menu: "Posts"
       statistics:
         title: 'Channel statistics'
         total_subscribers: 'Total subscribers'
