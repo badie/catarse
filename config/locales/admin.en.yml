@@ -105,6 +105,10 @@ en:
         current_period: "Last 8 weeks"
         previous_period: "Previous 8 weeks"
         last_year: "Last year"
+      charts:
+        current_period: "Last 8 wk."
+        last_year: "Previous year"
+
 
   channels:
     admin:
